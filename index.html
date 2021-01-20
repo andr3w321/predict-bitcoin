@@ -1,9 +1,49 @@
-!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8"/>
   <title>Predict Bitcoin</title>
+  <script type="text/javascript" src="./js/moment.min.js"></script>
+  <script type="text/javascript" src="./js/Chart.min.js"></script>
+  <script type="text/javascript" src="./js/hammer.min.js"></script>
+  <script type="text/javascript" src="./js/chartjs-plugin-zoom.min.js"></script>
+  <script type="text/javascript" src="./js/d3.v6.min.js"></script>
+  <script type="text/javascript" src="./data/combined.js"></script>
+<style type="text/css">
+/* 13. Basic Styling with CSS */
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+  
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+  
+  .focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+</style>
+
 </head>
 <body>
   <h1>Predict Bitcoin</h1>
+  <div style="width:75%">
+    <canvas id="btc_price_chart"></canvas>
+  </div>
+  <div id="viz"></div>
+  <script type="text/javascript" src="./js/predict-bitcoin.js"></script>
 </body>
 </html>
